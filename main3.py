@@ -83,6 +83,7 @@ def append_results(results):
 
 
 
-
-read_dir("New folder")
+# directory path goes here 
+path = "New folder"
+read_dir(path)
 append_results(results)
