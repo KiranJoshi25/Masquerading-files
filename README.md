@@ -1,8 +1,8 @@
 # Masquerading-files
 
 Running Instructions: 
-1) download the python file
-2) open python file 
+1) download the python file **main.py**
+2) open python file **main.py**
 3) find a variable named **path** its at the end of the file
 4) put the directory path in that variable in double quotes 
   for example:
