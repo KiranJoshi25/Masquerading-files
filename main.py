@@ -4,6 +4,7 @@ import os
 import binascii
 import pathlib
 import csv
+import time 
 results = []
 
 #dictionary of file extension and header, key value pair
@@ -84,6 +85,11 @@ def append_results(results):
 
 
 # directory path goes here 
+
 path = "New folder"
+start = time.time()
 read_dir(path)
 append_results(results)
+end = time.time()
+print("Time required",end - start)
+
