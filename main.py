@@ -1,12 +1,12 @@
 
 #Library imports
 import os
+import time 
 import binascii
 import pathlib
 import csv
-import time 
 results = []
-count_files = 0 
+count_files = 0
 
 #dictionary of file extension and header, key value pair
 dictionary = {'.jpg': b'ffd8f','.py': b'66726',
@@ -74,7 +74,9 @@ def read_dir(path):
             os.path.join(root, directory)
         for filename in filenames:
             scan_file(os.path.join(root,filename))
-            count_files+=1
+            global count_files
+            count_files +=1
+
 # function to append the result in a csv file
 def append_results(results):
     with open('result.csv', 'w') as f:
@@ -86,13 +88,13 @@ def append_results(results):
 
 
 # directory path goes here 
-path = "New folder"
+path = "New Folder"
 
 
-#measuring a running timme of the program code and calling the functions
+#measuring a running time of the code
 start = time.time()
 read_dir(path)
 append_results(results)
 end = time.time()
-print("Scanned {} files in {} seconds".format(count_files,end - start))
-
+print("Scanned {} files in {} seconds".format(count_files,int(end - start)))
+print("found {} masquerading files".format(len(results)))
