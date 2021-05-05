@@ -85,8 +85,10 @@ def append_results(results):
 
 
 # directory path goes here 
-
 path = "New folder"
+
+
+#measuring a running timme of the program code and calling the functions
 start = time.time()
 read_dir(path)
 append_results(results)
